@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>@ViewBag.Title - LHS</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <!-- Navigation Start  -->
+    <nav class="navbar navbar-default navbar-sticky bootsnav">
+        <div class="container">
+            <!-- Start Header Navigation -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a href="@Url.Action("Index", "Home", new { area = ""})" class="navbar-brand">
+                    <img src="~/img/logo.png" class="logo">
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-menu">
+                @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                {
+                    @Html.AntiForgeryToken()
+                }
+                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    @if (Request.IsAuthenticated)
+    {
+                <li>
+                    @Html.ActionLink("Manage", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                </li>
+                <li>
+                    @Html.ActionLink("Edit", "Edit", "Users", routeValues: new { name = User.Identity.Name }, htmlAttributes: new { title = "Edit" })
+                </li>
+                <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+
+
+}
+else
+{
+                <li>@Html.ActionLink("Register", "Register", "Account", routeValues: null, htmlAttributes: new { id = "registerLink" })</li>
+                <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })</li>
+
+}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/mybundle")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+

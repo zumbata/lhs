@@ -1,0 +1,11 @@
+C:\Users\zumbata\source\repos\WebApplication1\Data\bin\Debug\Data.dll.config
+C:\Users\zumbata\source\repos\WebApplication1\Data\bin\Debug\Data.dll
+C:\Users\zumbata\source\repos\WebApplication1\Data\bin\Debug\Data.pdb
+C:\Users\zumbata\source\repos\WebApplication1\Data\bin\Debug\EntityFramework.dll
+C:\Users\zumbata\source\repos\WebApplication1\Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\zumbata\source\repos\WebApplication1\Data\bin\Debug\EntityFramework.xml
+C:\Users\zumbata\source\repos\WebApplication1\Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\zumbata\source\repos\WebApplication1\Data\obj\Debug\Data.csprojResolveAssemblyReference.cache
+C:\Users\zumbata\source\repos\WebApplication1\Data\obj\Debug\Data.csproj.CoreCompileInputs.cache
+C:\Users\zumbata\source\repos\WebApplication1\Data\obj\Debug\Data.dll
+C:\Users\zumbata\source\repos\WebApplication1\Data\obj\Debug\Data.pdb

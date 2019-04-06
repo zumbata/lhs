@@ -1,0 +1,17 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<section class="main-banner marquee">
+    <div class="container">
+        <div class="caption">
+            <h2>Choose who you need</h2>
+            <br>
+            <div class="btn-group btn-group-justified">
+                @Html.ActionLink("Plumber", "Index", "Category", new {cat = "Plumber" }, new { @class = "btn seub-btn btn-lg", style = "background-color: #28a745" })
+                @Html.ActionLink("Electrician", "Index", "Category", new { cat = "Electrician" }, new { @class = "btn seub-btn btn-lg", style = "background-color: #dc3545" })
+                @Html.ActionLink("Mechanic", "Index", "Category", new { cat = "Mechanic" }, new { @class = "btn seub-btn btn-lg", style = "background-color: #007bff" })
+            </div>
+        </div>
+    </div>
+</section>
